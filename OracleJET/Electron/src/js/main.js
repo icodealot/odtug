@@ -75,7 +75,6 @@ require(['ojs/ojcore', 'knockout', 'appController', 'ojs/ojknockout',
       // event before executing any code that might interact with Cordova APIs or plugins.
       if ($(document.body).hasClass('oj-hybrid')) {
         document.addEventListener("deviceready", init);
-        require.nodeRequire = window.nodeRequire;
       } else {
         init();
       }

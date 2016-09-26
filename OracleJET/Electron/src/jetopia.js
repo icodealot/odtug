@@ -18,9 +18,6 @@ exports.getDataFromORDS = (cb) => {
         });
         res.on('end', () => {
             cb(data);
-            //console.log(data);
-            //let win = new BrowserWindow({width: 400, height: 200});
-            //win.webContents.insertText('<html><body><pre>' + JSON.stringify(data) + '</pre></body></html>');
         });
     });
 };

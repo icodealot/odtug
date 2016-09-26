@@ -1,0 +1,23 @@
+<div id='thematicMap-container'>
+  <div data-bind="ojComponent:{
+      component: 'ojThematicMap',
+      animationOnDisplay: 'auto',
+      basemap: 'usa',
+      areaLayers: layers,
+      pointDataLayers: points
+      }"
+       style="width:100%; height:500px;">
+  </div>
+</div>
+
+<div id='legend-container'>
+  <div data-bind="ojComponent: {
+      component: 'ojLegend',
+      halign: 'center',
+      orientation: 'horizontal',
+      textStyle: 'font-size:14px;',
+      sections: legendSections
+      }"
+       style="width:100%; height:30px;">
+  </div>
+</div>

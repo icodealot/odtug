@@ -1,0 +1,31 @@
+<div id='tagcloud-container'>
+  <div style="max-width:800px;width:100%;">
+    <div style="padding-left:16px; display:inline-block">
+      <button id= "button1" aria-controls="tagcloud1"
+         data-bind="click: valueButtonClick,
+           ojComponent: {component: 'ojButton', label: 'Update values'}">
+      </button>
+    </div>
+    <div style="padding-left:16px; display:inline-block">
+      <button id= "button2" aria-controls="tagcloud1"
+         data-bind="click: colorButtonClick,
+           ojComponent: {component: 'ojButton', label: 'Update colors'}">
+      </button>
+    </div>
+    <div style="padding-left:16px; display:inline-block">
+      <button id= "button3" aria-controls="tagcloud1"
+         data-bind="click: itemButtonClick,
+          ojComponent: {component: 'ojButton', label: 'Add/Remove item'}">
+      </button>
+    </div>
+  </div>
+  <div id="tagcloud1" data-bind="ojComponent:{
+      component: 'ojTagCloud',
+              layout: 'cloud',
+              animationOnDisplay: 'auto',
+              animationOnDataChange: 'auto',
+              items: tags
+      }"
+       style="clear:left;max-width:800px;height:300px;">
+  </div>
+</div>

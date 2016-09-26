@@ -1,0 +1,27 @@
+{
+  "name": "oraclejet-app",
+  "version": "1.0.0",
+  "description": "A sample Oracle JavaScript Extension Toolkit (JET) web app",
+  "author": {
+    "name": "Oracle Jet Team"
+  },
+  "main": "./web/jetopia.js",
+  "scripts": {
+    "start": "electron ./web/jetopia.js",
+    "build-mac": "electron-packager --platform=darwin --arch=x64 --version=1.0.0 . Jetopia --ignore=node_modules/electron-*,node_modules/asar",
+    "build-win": "electron-packager --platform=win32 --arch=x64 --version=1.0.0 . Jetopia --ignore=node_modules/electron-*,node_modules/asar"
+  },
+  "devDependencies": {
+    "electron-packager": "^8.0.0",
+    "electron-prebuilt": "^1.4.1",
+    "grunt": "^1.0.1",
+    "grunt-bowercopy": "1.2.4",
+    "grunt-oraclejet": "~1.1.0",
+    "load-grunt-config": "0.19.2",
+    "oraclejet-tooling": "~1.1.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "private": true
+}

@@ -1,0 +1,83 @@
+<div id='chart-container'>
+    <div id="legend1" data-bind="ojComponent: {
+        component: 'ojLegend', 
+        orientation: 'horizontal',
+        sections: legendSections,
+        halign: 'center', valign: 'middle'}" 
+         style="width:100%;height:25px;">
+    </div>
+    <div class="oj-flex">
+        <div class="oj-flex-item oj-lg-6">
+            <div id="scatterChart" data-bind="ojComponent: {
+                component: 'ojChart', 
+                type: 'scatter', 
+                series: scatterSeriesValue, 
+                groups: groupsValue, 
+                animationOnDisplay: 'auto', 
+                animationOnDataChange: 'auto',
+                selectionMode: 'multiple',
+                selection: selectedItemsValue,
+                legend: {rendered: 'off'}},
+                selectInput: scatterSelectInput"
+                 style="width:100%;height:250px;float:left;">
+            </div>
+        </div>
+        <div class="oj-flex-item oj-lg-6">
+            <div id="bubbleChart" data-bind="ojComponent: {
+                component: 'ojChart', 
+                type: 'bubble', 
+                series: bubbleSeriesValue, 
+                groups: groupsValue, 
+                animationOnDisplay: 'auto', 
+                animationOnDataChange: 'auto',
+                selectionMode: 'multiple',
+                selection: selectedItemsValue,
+                legend: {rendered: 'off'}},
+                selectInput: bubbleSelectInput"
+                 style="width:100%;height:250px;float:left;">
+            </div>
+        </div>
+        <div class="oj-flex-item oj-lg-6">
+            <div id="barChart" data-bind="ojComponent: {
+                component: 'ojChart', 
+                type: 'bar', 
+                series: blacSeriesValue, 
+                groups: groupsValue,  
+                animationOnDisplay: 'auto',
+                animationOnDataChange: 'auto',
+                selectionMode: 'multiple',
+                selection: selectedItemsValue,
+                legend: {rendered: 'off'}},
+                selectInput: barSelectInput"
+                 style="width:100%;height:250px;float:left;">
+            </div>
+        </div>
+        <div class="oj-flex-item oj-lg-6">
+            <div id="areaChart" data-bind="ojComponent: {
+                component: 'ojChart', 
+                type: 'area', 
+                series: blacSeriesValue, 
+                groups: groupsValue, 
+                stack: 'on',
+                animationOnDisplay: 'auto',
+                animationOnDataChange: 'auto',
+                selectionMode: 'multiple',
+                selection: selectedItemsValue,
+                legend: {rendered: 'off'}},
+                selectInput: areaSelectInput"
+                 style="width:100%;height:250px;float:left;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+
+<div class="oj-hybrid-padding">
+  <h3>Dashboard Content Area</h3>
+  <div>
+      To change the content of this section, you will make edits to the dashboard.html file located in the /js/views folder.
+  </div>
+</div-->

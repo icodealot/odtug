@@ -1,0 +1,50 @@
+<div id="ganttcontainer" > 
+  <button id= "button1" aria-controls="barChart"
+          data-bind="click: function() {updateData(true)}, 
+                     ojComponent: {component: 'ojButton', label: 'Update values'}">
+  </button>
+  <button id= "button2" aria-controls="barChart"
+        data-bind="click: function() {addRemoveTask(true)}, 
+                   ojComponent: {component: 'ojButton', label: 'Add/Remove Task'}">
+  </button>
+  <button id= "button3" aria-controls="barChart"
+        data-bind="click: function() {moveTask(true)}, 
+                   ojComponent: {component: 'ojButton', label: 'Move Task'}">
+  </button>
+  <button id= "button4" aria-controls="barChart"
+        data-bind="click: function() {addRemoveRow(true)}, 
+                   ojComponent: {component: 'ojButton', label: 'Add/Remove Row'}">
+  </button>
+  <button id= "button5" aria-controls="barChart"
+        data-bind="click: function() {multipleUpdates()}, 
+                   ojComponent: {component: 'ojButton', label: 'Multiple Updates'}">
+  </button>
+  <br><br>
+  <div id="gantt" 
+    aria-label="Animations Demo"
+    data-bind='ojComponent: {
+      component: "ojGantt",
+      animationOnDisplay: "auto",
+      animationOnDataChange: "auto",
+      majorAxis: {
+        scale: "months",
+        zoomOrder: ["quarters", "months", "weeks", "days"] 
+      },
+      minorAxis: {
+        scale: "weeks",
+        zoomOrder: ["quarters", "months", "weeks", "days"] 
+      },
+      gridlines: {
+        horizontal: "visible",
+        vertical: "visible"
+      },
+      start: new Date("Jan 1, 2016").getTime(),
+      end: new Date("Dec 31, 2016").getTime(),
+      selectionMode: "single",
+      viewportStart: new Date("Jan 1, 2016").getTime(),
+      viewportEnd: new Date("Jun 1, 2016").getTime(),
+      rows:  rowsValue                                     
+    }' style="width:100%;height:400px;">
+  </div>
+  <div style="clear:both"></div>  
+</div>
